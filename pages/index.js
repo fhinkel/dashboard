@@ -10,53 +10,50 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Microsoft JavaScript Advocacy CI
         </h1>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          All our samples in one view!
         </p>
 
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
+          <a href="https://github.com/staticwebdev/nextjs-starter/actions" className="card">
+            <h3>staticwebdev/nextjs-starter &rarr;</h3>
+            <p>Next.js starter. </p>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+            <img src="https://github.com/staticwebdev/nextjs-starter/actions/workflows/playwright.js.yml/badge.svg" alt="badge" className="logo" />
+            </p>
+          </a>
+
+          <a href="https://github.com/Azure-Samples/msdocs-javascript-nodejs-server/actions" className="card">
+            <h3>Azure-Samples/msdocs-javascript-nodejs-serve &rarr;</h3>
+            <p>Build and deploy Node.js apps</p>
+            <p>
+            <img src="https://github.com/staticwebdev/nextjs-starter/actions/workflows/playwright.js.yml/badge.svg" alt="badge" className="logo" />
+            </p>
+          </a>
+
+          <a href="https://github.com/staticwebdev/angular-basic" className="card">
+            <h3>staticwebdev/angular-basic &rarr;</h3>
+            <p>Angular basic</p>
+            <p>
+            <img src="https://github.com/staticwebdev/nextjs-starter/actions/workflows/playwright.js.yml/badge.svg" alt="badge" className="logo" />
+            </p>
+          </a>
+
+          <a href="https://github.com/staticwebdev/StartupAdventurer" className="card">
+            <h3>staticwebdev/Startup-Adventurer &rarr;</h3>
+            <p>SWA Startup Adventurer</p>
+            <p>
+            <img src="https://github.com/staticwebdev/nextjs-starter/actions/workflows/playwright.js.yml/badge.svg" alt="badge" className="logo" />
             </p>
           </a>
         </div>
       </main>
 
       <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
+        
       </footer>
 
       <style jsx>{`
