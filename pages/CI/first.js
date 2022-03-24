@@ -15,48 +15,33 @@ export default function Home() {
         </h1>
 
         <p className="description">
-          All our samples in one view!
+        <Link href="/">
+          <a>Back to Overview</a>
+        </Link>
         </p>
 
         <div className="grid">
-          <Link href="/CI/first">
-            <a className="card">
-              <h3>staticwebdev/nextjs-starter &rarr;</h3>
-              <p>Next.js starter. </p>
-              <p>
-                <img src="https://github.com/staticwebdev/nextjs-starter/actions/workflows/playwright.js.yml/badge.svg" alt="badge" className="logo" />
-              </p>
-            </a>
-          </Link>
-
-          <a href="https://github.com/Azure-Samples/msdocs-javascript-nodejs-server/actions" className="card">
-            <h3>Azure-Samples/msdocs-javascript-nodejs-serve &rarr;</h3>
-            <p>Build and deploy Node.js apps</p>
+          <a  className="card">
+            <h3>staticwebdev/nextjs-starter &rarr;</h3>
+            <p>Next.js starter. </p>
             <p>
-              <img src="https://github.com/staticwebdev/nextjs-starter/actions/workflows/playwright.js.yml/badge.svg" alt="badge" className="logo" />
+            <img src="https://github.com/staticwebdev/nextjs-starter/actions/workflows/playwright.js.yml/badge.svg" alt="badge" className="logo" />
             </p>
-          </a>
-
-          <a href="https://github.com/staticwebdev/angular-basic" className="card">
-            <h3>staticwebdev/angular-basic &rarr;</h3>
-            <p>Angular basic</p>
             <p>
-              <img src="https://github.com/staticwebdev/nextjs-starter/actions/workflows/playwright.js.yml/badge.svg" alt="badge" className="logo" />
+            <img src="https://github.com/staticwebdev/nextjs-starter/actions/workflows/playwright.js.yml/badge.svg" alt="badge" className="logo" />
             </p>
-          </a>
-
-          <a href="https://github.com/staticwebdev/StartupAdventurer" className="card">
-            <h3>staticwebdev/Startup-Adventurer &rarr;</h3>
-            <p>SWA Startup Adventurer</p>
             <p>
-              <img src="https://github.com/staticwebdev/nextjs-starter/actions/workflows/playwright.js.yml/badge.svg" alt="badge" className="logo" />
+            <img src="https://github.com/staticwebdev/nextjs-starter/actions/workflows/playwright.js.yml/badge.svg" alt="badge" className="logo" />
+            </p>
+            <p>
+            <img src="https://github.com/staticwebdev/nextjs-starter/actions/workflows/playwright.js.yml/badge.svg" alt="badge" className="logo" />
             </p>
           </a>
         </div>
       </main>
 
       <footer>
-
+        
       </footer>
 
       <style jsx>{`
