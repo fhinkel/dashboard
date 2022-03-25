@@ -19,7 +19,7 @@ export default function Home() {
         </p>
 
         <div className="grid">
-          <Link href="/CI/first">
+          <Link href="/CI/nextjs-starter">
             <a className="card">
               <h3>staticwebdev/nextjs-starter &rarr;</h3>
               <p>Next.js starter. </p>
@@ -29,7 +29,7 @@ export default function Home() {
             </a>
           </Link>
 
-          <a href="/CI/first" className="card">
+          <a href="/CI/msdocs-javascript-nodejs-serve" className="card">
             <h3>Azure-Samples/msdocs-javascript-nodejs-serve &rarr;</h3>
             <p>Build and deploy Node.js apps</p>
             <p>
@@ -37,7 +37,7 @@ export default function Home() {
             </p>
           </a>
 
-          <a href="/CI/first" className="card">
+          <a href="/CI/angular-basic" className="card">
             <h3>staticwebdev/angular-basic &rarr;</h3>
             <p>Angular basic</p>
             <p>
@@ -45,7 +45,7 @@ export default function Home() {
             </p>
           </a>
 
-          <a href="/CI/first" className="card">
+          <a href="/CI/Startup-Adventurer" className="card">
             <h3>staticwebdev/Startup-Adventurer &rarr;</h3>
             <p>SWA Startup Adventurer</p>
             <p>

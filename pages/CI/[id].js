@@ -1,7 +1,12 @@
+import { useRouter } from 'next/router'
+import { projects } from '../../utils/projectsData';
 import Head from 'next/head'
 import Link from 'next/link'
 
-export default function Home() {
+const Board = ({project}) => {
+    const router = useRouter();
+    const { id } = router.query;
+
     return (
         <div className="container">
             <Head>
@@ -11,7 +16,7 @@ export default function Home() {
 
             <main>
                 <h1 className="title">
-                staticwebdev/nextjs-starter CI
+                    {project.name} CI
                 </h1>
 
                 <p className="description">
@@ -223,3 +228,22 @@ export default function Home() {
         </div>
     )
 }
+
+
+export async function getStaticPaths() {
+    const paths = projects.map((project) => ({
+        params: { id: project.id },
+    }));
+    return {
+        paths,
+        fallback: true // false or 'blocking'
+    };
+}
+
+export async function getStaticProps({ params }) {
+    const project = projects.find((proj) => proj.id === params.id);
+    console.log(params.id);
+    return { props: { project } };
+}
+
+export default Board
