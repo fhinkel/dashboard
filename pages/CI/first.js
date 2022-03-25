@@ -11,7 +11,7 @@ export default function Home() {
 
             <main>
                 <h1 className="title">
-                    Microsoft JavaScript Advocacy CI
+                staticwebdev/nextjs-starter CI
                 </h1>
 
                 <p className="description">
