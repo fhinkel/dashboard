@@ -2,49 +2,75 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>CI Dashboard</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    return (
+        <div className="container">
+            <Head>
+                <title>CI Dashboard</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
-      <main>
-        <h1 className="title">
-          Microsoft JavaScript Advocacy CI
-        </h1>
+            <main>
+                <h1 className="title">
+                    Microsoft JavaScript Advocacy CI
+                </h1>
 
-        <p className="description">
-        <Link href="/">
-          <a>Back to Overview</a>
-        </Link>
-        </p>
+                <p className="description">
+                    <Link href="/">
+                        <a>Back to Overview</a>
+                    </Link>
+                </p>
 
-        <div className="grid">
-          <a  className="card">
-            <h3>staticwebdev/nextjs-starter &rarr;</h3>
-            <p>Next.js starter. </p>
-            <p>
-            <img src="https://github.com/staticwebdev/nextjs-starter/actions/workflows/playwright.js.yml/badge.svg" alt="badge" className="logo" />
-            </p>
-            <p>
-            <img src="https://github.com/staticwebdev/nextjs-starter/actions/workflows/playwright.js.yml/badge.svg" alt="badge" className="logo" />
-            </p>
-            <p>
-            <img src="https://github.com/staticwebdev/nextjs-starter/actions/workflows/playwright.js.yml/badge.svg" alt="badge" className="logo" />
-            </p>
-            <p>
-            <img src="https://github.com/staticwebdev/nextjs-starter/actions/workflows/playwright.js.yml/badge.svg" alt="badge" className="logo" />
-            </p>
-          </a>
-        </div>
-      </main>
+                <div className='left'>
+                    <div><img src="/failing.svg" alt="badge" className="logo" />
+                        chore: update test - 3 minutes ago
+                        <p className='subtitle'>
+                            Playwright tests #24: Pull request #32 opened by fhinkel: 2m 5s
+                        </p>
+                    </div>
 
-      <footer>
+                    <div><img src="/passing.svg" alt="badge" className="logo" />
+                        Playwright tests - 12 hours ago
+                        <p className='subtitle'>
+                            Playwright tests #23: Scheduled: 1m 43s
+                        </p>
+                    </div>
+
+                    <div><img src="/passing.svg" alt="badge" className="logo" />
+                        chore: add missing lint configs (#30) - yesterday
+                        <p className='subtitle'>
+                            Lint #9: Commit 53e7fbb pushed by fhinkel: 33s
+                        </p>
+                    </div>
+
+                    <div><img src="/passing.svg" alt="badge" className="logo" />
+                        Playwright tests - 2 days ago
+                        <p className='subtitle'>
+                            Playwright tests #15: Scheduled: 1m 54s
+                        </p>
+                    </div>
+
+                    <div><img src="/passing.svg" alt="badge" className="logo" />
+                        chore: update next to 12 (#27) - 2 days ago
+                        <p className='subtitle'>
+                            Playwright tests #10: Commit 0b1e99a pushed by fhinkel: Scheduled:  1m 36s
+                        </p>
+                    </div>
+
+                </div>
+
+
+            </main>
+
+            <footer>
+
+            </footer>
+
+            <style jsx>{`
+        .left {
+            justify-content: left;
+            align-items: left;
+        }
         
-      </footer>
-
-      <style jsx>{`
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
@@ -114,6 +140,11 @@ export default function Home() {
           font-size: 1.5rem;
         }
 
+        .subtitle {
+            line-height: .7;
+            font-size: .7rem;
+        }
+
         code {
           background: #fafafa;
           border-radius: 5px;
@@ -129,13 +160,13 @@ export default function Home() {
           justify-content: center;
           flex-wrap: wrap;
 
-          max-width: 800px;
+          max-width: 1600px;
           margin-top: 3rem;
         }
 
         .card {
           margin: 1rem;
-          flex-basis: 45%;
+          flex-basis: 90%;
           padding: 1.5rem;
           text-align: left;
           color: inherit;
@@ -175,7 +206,7 @@ export default function Home() {
         }
       `}</style>
 
-      <style jsx global>{`
+            <style jsx global>{`
         html,
         body {
           padding: 0;
@@ -189,6 +220,6 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
-    </div>
-  )
+        </div>
+    )
 }
