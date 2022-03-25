@@ -1,12 +1,8 @@
-import { useRouter } from 'next/router'
 import { projects } from '../../utils/projectsData';
 import Head from 'next/head'
 import Link from 'next/link'
 
 const Board = ({project}) => {
-    const router = useRouter();
-    const { id } = router.query;
-
     return (
         <div className="container">
             <Head>
@@ -236,7 +232,7 @@ export async function getStaticPaths() {
     }));
     return {
         paths,
-        fallback: true // false or 'blocking'
+        fallback: false // false or 'blocking'
     };
 }
 
