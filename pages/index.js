@@ -25,7 +25,7 @@ export default function Home() {
           <Link href={`/CI/${project.id}`}>
           <a className="card">
             <h3>{project.name} &rarr;</h3>
-            <p>Next.js starter. </p>
+            <p>{project.long? project.long : ''} </p>
             <p>
               <img src={`/${project.status}.svg`} alt="badge" className="logo" />
             </p>
