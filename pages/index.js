@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { projects } from '../utils/projectsData';
+
 
 export default function Home() {
   return (
@@ -19,39 +21,17 @@ export default function Home() {
         </p>
 
         <div className="grid">
-          <Link href="/CI/nextjs-starter">
-            <a className="card">
-              <h3>staticwebdev/nextjs-starter &rarr;</h3>
-              <p>Next.js starter. </p>
-              <p>
-                <img src="/passing.svg" alt="badge" className="logo" />
-              </p>
-            </a>
-          </Link>
-
-          <a href="/CI/msdocs-javascript-nodejs-serve" className="card">
-            <h3>Azure-Samples/msdocs-javascript-nodejs-serve &rarr;</h3>
-            <p>Build and deploy Node.js apps</p>
+        {projects.map((project) => 
+          <Link href={`/CI/${project.id}`}>
+          <a className="card">
+            <h3>{project.name} &rarr;</h3>
+            <p>Next.js starter. </p>
             <p>
-              <img src="/failing.svg" alt="badge" className="logo" />
+              <img src={`/${project.status}.svg`} alt="badge" className="logo" />
             </p>
           </a>
-
-          <a href="/CI/angular-basic" className="card">
-            <h3>staticwebdev/angular-basic &rarr;</h3>
-            <p>Angular basic</p>
-            <p>
-              <img src="/passing.svg" alt="badge" className="logo" />
-            </p>
-          </a>
-
-          <a href="/CI/Startup-Adventurer" className="card">
-            <h3>staticwebdev/Startup-Adventurer &rarr;</h3>
-            <p>SWA Startup Adventurer</p>
-            <p>
-              <img src="/passing.svg" alt="badge" className="logo" />
-            </p>
-          </a>
+        </Link>
+        )}
         </div>
       </main>
 
