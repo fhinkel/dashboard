@@ -2,71 +2,71 @@ import { projects } from '../../utils/projectsData';
 import Head from 'next/head'
 import Link from 'next/link'
 
-const Board = ({project}) => {
-    return (
-        <div className="container">
-            <Head>
-                <title>CI Dashboard</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+const Board = ({ project }) => {
+  return (
+    <div className="container">
+      <Head>
+        <title>CI Dashboard</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-            <main>
-                <h1 className="title">
-                    {project.name} CI
-                </h1>
+      <main>
+        <h1 className="title">
+          {project.name} CI
+        </h1>
 
-                <p className="description">
-                    <Link href="/">
-                        <a>Back to Overview</a>
-                    </Link>
-                </p>
+        <p className="description">
+          <Link href="/">
+            <a>Back to Overview</a>
+          </Link>
+        </p>
 
-                <div className='left'>
-                    <div><img src="/failing.svg" alt="badge" className="logo" />
-                        chore: update test - 3 minutes ago
-                        <p className='subtitle'>
-                            Playwright tests #24: Pull request #32 opened by fhinkel: 2m 5s
-                        </p>
-                    </div>
+        <div className='left'>
+          <div><a href='https://github.com/staticwebdev/nextjs-starter/actions?query=branch%3Amain'><img src="/failing.svg" alt="badge" className="logo" /></a>
+            chore: update test - 3 minutes ago
+            <p className='subtitle'>
+              Playwright tests #24: Pull request #32 opened by fhinkel: 2m 5s
+            </p>
+          </div>
 
-                    <div><img src="/passing.svg" alt="badge" className="logo" />
-                        Playwright tests - 12 hours ago
-                        <p className='subtitle'>
-                            Playwright tests #23: Scheduled: 1m 43s
-                        </p>
-                    </div>
+          <div><a href='https://github.com/staticwebdev/nextjs-starter/actions?query=branch%3Amain'><img src="/passing.svg" alt="badge" className="logo" /></a>
+            Playwright tests - 12 hours ago
+            <p className='subtitle'>
+              Playwright tests #23: Scheduled: 1m 43s
+            </p>
+          </div>
 
-                    <div><img src="/passing.svg" alt="badge" className="logo" />
-                        chore: add missing lint configs (#30) - yesterday
-                        <p className='subtitle'>
-                            Lint #9: Commit 53e7fbb pushed by fhinkel: 33s
-                        </p>
-                    </div>
+          <div><a href='https://github.com/staticwebdev/nextjs-starter/actions?query=branch%3Amain'><img src="/passing.svg" alt="badge" className="logo" /></a>
+            chore: add missing lint configs (#30) - yesterday
+            <p className='subtitle'>
+              Lint #9: Commit 53e7fbb pushed by fhinkel: 33s
+            </p>
+          </div>
 
-                    <div><img src="/passing.svg" alt="badge" className="logo" />
-                        Playwright tests - 2 days ago
-                        <p className='subtitle'>
-                            Playwright tests #15: Scheduled: 1m 54s
-                        </p>
-                    </div>
+          <div><a href='https://github.com/staticwebdev/nextjs-starter/actions?query=branch%3Amain'><img src="/passing.svg" alt="badge" className="logo" /></a>
+            Playwright tests - 2 days ago
+            <p className='subtitle'>
+              Playwright tests #15: Scheduled: 1m 54s
+            </p>
+          </div>
 
-                    <div><img src="/passing.svg" alt="badge" className="logo" />
-                        chore: update next to 12 (#27) - 2 days ago
-                        <p className='subtitle'>
-                            Playwright tests #10: Commit 0b1e99a pushed by fhinkel: Scheduled:  1m 36s
-                        </p>
-                    </div>
+          <div><a href='https://github.com/staticwebdev/nextjs-starter/actions?query=branch%3Amain'><img src="/passing.svg" alt="badge" className="logo" /></a>
+            chore: update next to 12 (#27) - 2 days ago
+            <p className='subtitle'>
+              Playwright tests #10: Commit 0b1e99a pushed by fhinkel: Scheduled:  1m 36s
+            </p>
+          </div>
 
-                </div>
+        </div>
 
 
-            </main>
+      </main>
 
-            <footer>
+      <footer>
 
-            </footer>
+      </footer>
 
-            <style jsx>{`
+      <style jsx>{`
         .left {
             justify-content: left;
             align-items: left;
@@ -207,7 +207,7 @@ const Board = ({project}) => {
         }
       `}</style>
 
-            <style jsx global>{`
+      <style jsx global>{`
         html,
         body {
           padding: 0;
@@ -221,25 +221,25 @@ const Board = ({project}) => {
           box-sizing: border-box;
         }
       `}</style>
-        </div>
-    )
+    </div>
+  )
 }
 
 
 export async function getStaticPaths() {
-    const paths = projects.map((project) => ({
-        params: { id: project.id },
-    }));
-    return {
-        paths,
-        fallback: false // false or 'blocking'
-    };
+  const paths = projects.map((project) => ({
+    params: { id: project.id },
+  }));
+  return {
+    paths,
+    fallback: false // false or 'blocking'
+  };
 }
 
 export async function getStaticProps({ params }) {
-    const project = projects.find((proj) => proj.id === params.id);
-    console.log(params.id);
-    return { props: { project } };
+  const project = projects.find((proj) => proj.id === params.id);
+  console.log(params.id);
+  return { props: { project } };
 }
 
 export default Board
