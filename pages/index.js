@@ -17,7 +17,7 @@ export default function Home() {
         </h1>
 
         <p className="description">
-          Integration tests status
+          Code samples health
         </p>
 
         <div className="grid">
