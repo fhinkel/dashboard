@@ -22,35 +22,35 @@ const Board = ({ project }) => {
         </p>
 
         <div className='left'>
-          <div><a href='https://github.com/staticwebdev/nextjs-starter/actions?query=branch%3Amain'><img src="/failing.svg" alt="badge" className="logo" /></a>
+          <div><a href='https://github.com/staticwebdev/nextjs-starter/actions'><img src="/passing.svg" alt="badge" className="logo" /></a>
             chore: update test - 3 minutes ago
             <p className='subtitle'>
               Playwright tests #24: Pull request #32 opened by fhinkel: 2m 5s
             </p>
           </div>
 
-          <div><a href='https://github.com/staticwebdev/nextjs-starter/actions?query=branch%3Amain'><img src="/passing.svg" alt="badge" className="logo" /></a>
+          <div><a href='https://github.com/staticwebdev/nextjs-starter/actions'><img src="/failing.svg" alt="badge" className="logo" /></a>
             Playwright tests - 12 hours ago
             <p className='subtitle'>
               Playwright tests #23: Scheduled: 1m 43s
             </p>
           </div>
 
-          <div><a href='https://github.com/staticwebdev/nextjs-starter/actions?query=branch%3Amain'><img src="/passing.svg" alt="badge" className="logo" /></a>
+          <div><a href='https://github.com/staticwebdev/nextjs-starter/actions'><img src="/passing.svg" alt="badge" className="logo" /></a>
             chore: add missing lint configs (#30) - yesterday
             <p className='subtitle'>
               Lint #9: Commit 53e7fbb pushed by fhinkel: 33s
             </p>
           </div>
 
-          <div><a href='https://github.com/staticwebdev/nextjs-starter/actions?query=branch%3Amain'><img src="/passing.svg" alt="badge" className="logo" /></a>
+          <div><a href='https://github.com/staticwebdev/nextjs-starter/actions'><img src="/passing.svg" alt="badge" className="logo" /></a>
             Playwright tests - 2 days ago
             <p className='subtitle'>
               Playwright tests #15: Scheduled: 1m 54s
             </p>
           </div>
 
-          <div><a href='https://github.com/staticwebdev/nextjs-starter/actions?query=branch%3Amain'><img src="/passing.svg" alt="badge" className="logo" /></a>
+          <div><a href='https://github.com/staticwebdev/nextjs-starter/actions'><img src="/passing.svg" alt="badge" className="logo" /></a>
             chore: update next to 12 (#27) - 2 days ago
             <p className='subtitle'>
               Playwright tests #10: Commit 0b1e99a pushed by fhinkel: Scheduled:  1m 36s
